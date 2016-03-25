@@ -21,7 +21,12 @@
       "apiKeyRequired": false,
       "requestParameters": {},
       "requestTemplates": {
-        "application/json": ""
+        "application/json": {
+          "httpMethod" : "$context.httpMethod",
+          "all-params" : "$input.params()",
+          "query-params" : "$input.params().querystring",
+          "header-params" : "$input.params().header"
+        }
       },
       "responses": {
         "400": {
