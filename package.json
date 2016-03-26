@@ -9,5 +9,9 @@
     "type": "git",
     "url": "git://github.com/"
   },
-  "dependencies": {}
+  "dependencies": {
+    "bluebird": "3.3.4",
+    "serverless": "0.5.1",
+    "vogels": "2.2.0"
+  }
 }
