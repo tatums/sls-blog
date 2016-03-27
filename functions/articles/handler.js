@@ -1,7 +1,8 @@
 'use strict';
 
+var action = require('./lib/action.js');
+
 module.exports.handler = function(event, context) {
-  var action = require('./models/action');
 
   var run = action[event.httpMethod];
   run(event, context)
@@ -11,6 +12,6 @@ module.exports.handler = function(event, context) {
   })
   .catch(function(error){
     return context.done(null, {message: error});
-  })
+  });
 
 };
