@@ -52,6 +52,7 @@
       "requestParameters": {},
       "requestTemplates": {
         "application/json": {
+          "httpMethod" : "$context.httpMethod",
           "id": "$input.params('id')"
         }
       },
