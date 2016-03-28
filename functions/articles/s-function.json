@@ -23,9 +23,9 @@
       "requestTemplates": {
         "application/json": {
           "httpMethod" : "$context.httpMethod",
-          "all-params" : "$input.params()",
-          "query-params" : "$input.params().querystring",
-          "header-params" : "$input.params().header"
+          "params" : "$input.params()",
+          "querystring" : "$input.params().querystring",
+          "headers" : "$input.params().header"
         }
       },
       "responses": {
@@ -48,7 +48,7 @@
       "type": "AWS",
       "authorizationType": "none",
       "authorizerFunction": false,
-      "apiKeyRequired": false,
+      "apiKeyRequired": true,
       "requestParameters": {},
       "requestTemplates": {
         "application/json": {
